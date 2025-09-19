@@ -1,4 +1,4 @@
-// Theme toggle & year
+// Theme toggle & footer year
 (function(){
   const btn = document.querySelector('.theme-toggle');
   const root = document.documentElement;
@@ -6,7 +6,8 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   function getPref(){
-    return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    return localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   }
   function apply(theme){
     if(theme==='light'){
@@ -16,8 +17,8 @@
       root.style.setProperty('--muted','#4b5563');
       root.style.setProperty('--shadow','0 10px 30px rgba(0,0,0,.08)');
       document.body.style.background = 'linear-gradient(180deg,#f7f8fc 0%, #eef1f7 70%, #f7f8fc 100%)';
-    }else{
-      root.style.removeProperty('--bg'); // revert to defaults
+    } else {
+      root.style.removeProperty('--bg');
       document.body.style.background = 'linear-gradient(180deg,#0b0e13 0%, #0e141d 70%, #0b0e13 100%)';
     }
     localStorage.setItem('theme', theme);
@@ -31,3 +32,13 @@
     });
   }
 })();
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
