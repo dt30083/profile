@@ -19,3 +19,8 @@ a{color:#4ea3ff}
 .project-matrix a{color:#4ea3ff;font-weight:500}
 .project-matrix a:hover{text-decoration:underline}
 .site-footer{text-align:center;padding:20px 0;font-size:.85rem;color:#aaa}
+.project-matrix td {
+  white-space: normal;   /* allow text to wrap */
+  word-wrap: break-word; /* break long words if needed */
+  vertical-align: top;   /* align text to top for better readability */
+}
