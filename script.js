@@ -4,6 +4,9 @@
   const root = document.documentElement;
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+  
+  // Remove loading state once JS loads
+  document.body.classList.remove('loading');
 
   function getPref(){
     return localStorage.getItem('theme') || 

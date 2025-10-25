@@ -4,6 +4,29 @@ body {
   background: #0b0e13;
   color: #eaf2ff;
   margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.loading {
+  opacity: 0.8;
+}
+
+/* === Skip Link === */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #4ea3ff;
+  color: #0b0e13;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 /* === Layout Containers === */
@@ -20,6 +43,97 @@ body {
   border-radius: 10px;
 }
 
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* === Hero Section === */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.kicker {
+  font-size: 1.2rem;
+  color: #4ea3ff;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.sub {
+  color: #aaa;
+  margin: 0 0 20px 0;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.id-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: #4ea3ff;
+  color: #0b0e13;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.certs {
+  font-size: 0.85rem;
+  color: #4ea3ff;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .cta {
+    justify-content: center;
+  }
+}
+
 /* === Typography === */
 h1, h2 {
   margin-top: 0;
@@ -32,6 +146,11 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid #4ea3ff;
+  outline-offset: 2px;
 }
 
 /* === Buttons === */
@@ -55,6 +174,35 @@ a:hover {
   color: #0b0e13;
 }
 
+.btn:focus {
+  outline: 2px solid #4ea3ff;
+  outline-offset: 2px;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #eaf2ff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background 0.2s;
+  z-index: 100;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #4ea3ff;
+  outline-offset: 2px;
+}
+
 /* === Tags & Lists === */
 .tags {
   list-style: none;
@@ -74,6 +222,19 @@ a:hover {
 .highlights {
   list-style: disc;
   padding-left: 20px;
+}
+
+.cols {
+  columns: 2;
+  column-gap: 20px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+@media (max-width: 480px) {
+  .cols {
+    columns: 1;
+  }
 }
 
 /* === Timeline (legacy experience section) === */
