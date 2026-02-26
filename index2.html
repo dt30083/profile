@@ -18,32 +18,45 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
+
 <body class="loading">
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="site-header">
-    <div class="container hero">
-      <div class="hero-text">
-        <h1>Devecchio Turner, Ph.D., MBA</h1>
-        <p class="kicker">VP, Cybersecurity Architecture &amp; Cyber Resilience</p>
-        <p class="sub">Zero Trust • Cyber Recovery • Cloud Security • Enterprise Architecture • OT/IoT Security</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Contact</a>
-          <a class="btn" href="#experience">Experience</a>
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener" aria-label="Download Devecchio Turner's resume as PDF">Download Résumé</a>
+    <!-- FIX: .container wraps .hero (instead of combining both classes on one element) -->
+    <div class="container">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Devecchio Turner, Ph.D., MBA</h1>
+          <p class="kicker">VP, Cybersecurity Architecture &amp; Cyber Resilience</p>
+          <p class="sub">Zero Trust • Cyber Recovery • Cloud Security • Enterprise Architecture • OT/IoT Security</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Contact</a>
+            <a class="btn" href="#experience">Experience</a>
+            <a class="btn" href="resume.pdf" target="_blank" rel="noopener" aria-label="Download Devecchio Turner's resume as PDF">Download Résumé</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-card">
-        <div class="id-card">
-          <div class="avatar" aria-hidden="true">DT</div>
-          <div>
-            <p><strong>Dallas–Fort Worth, TX</strong></p>
-            <p><a href="mailto:drdevturner@gmail.com" aria-label="Email Devecchio Turner">drdevturner@gmail.com</a> • <a href="tel:+18177515506" aria-label="Call Devecchio Turner">817.751.5506</a></p>
-            <p><a href="https://www.linkedin.com/in/devecchioturner/" target="_blank" rel="noopener" aria-label="View Devecchio Turner's LinkedIn profile">LinkedIn</a></p>
-            <p class="certs">CISSP • CCSP • CCSK • ACCISO</p>
+
+        <div class="hero-card">
+          <div class="id-card">
+            <div class="avatar" aria-hidden="true">DT</div>
+            <div>
+              <p><strong>Dallas–Fort Worth, TX</strong></p>
+              <p>
+                <a href="mailto:drdevturner@gmail.com" aria-label="Email Devecchio Turner">drdevturner@gmail.com</a>
+                •
+                <a href="tel:+18177515506" aria-label="Call Devecchio Turner">817.751.5506</a>
+              </p>
+              <p>
+                <a href="https://www.linkedin.com/in/devecchioturner/" target="_blank" rel="noopener" aria-label="View Devecchio Turner's LinkedIn profile">LinkedIn</a>
+              </p>
+              <p class="certs">CISSP • CCSP • CCSK • ACCISO</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <button class="theme-toggle" title="Toggle theme" aria-label="Toggle theme">🌓</button>
   </header>
 
@@ -301,6 +314,11 @@
               <td>Developed an end-to-end deep learning–based computer vision system for SafeGuard Corp to automatically detect safety helmet usage in workplace images. The project applied transfer learning with a VGG-16 backbone, custom feed-forward neural networks, and controlled training-only data augmentation to address limited labeled data and improve generalization. Multiple models were systematically evaluated using accuracy, recall, precision, and F1 score, leading to the selection of a production-ready architecture that balances performance, robustness, and operational reliability for automated safety compliance monitoring.</td>
               <td><a href="https://htmlpreview.github.io/?https://github.com/dt30083/Projects/blob/main/ComputerVision/WorkingCopyHelmNet_Full_Code.html" target="_blank" rel="noopener" aria-label="View Safety Helmet Detection project on GitHub">GitHub</a></td>
             </tr>
+            <tr>
+              <td>SuperKart (Model Deployment)</td>
+              <td>Built and operationalized a retail sales forecasting model to predict next-quarter outlet revenue. Performed EDA, feature engineering, model building, and structured hyperparameter tuning, then productionized the solution using Docker, Flask-based REST APIs, and a Streamlit interface, with model versioning and distribution via Hugging Face.</td>
+              <td><a href="https://htmlpreview.github.io/?https://github.com/dt30083/Projects/blob/main/SuperKart/Full_Code_SuperKart_Model_Deployment_Notebook_%5BUpdated%5D%20(1)%20(2).html" target="_blank" rel="noopener" aria-label="View SuperKart Model Deployment project on GitHub">GitHub</a></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -328,14 +346,21 @@
       <article class="pub">
         <h3>Doctoral Dissertation (2018)</h3>
         <p><strong>Examining the Relationship Between Security Efficacy, Agility, and Strategic Alignment in Industrial Control System Environments: A Correlational Study</strong></p>
-        <p>Quantitatively demonstrated that security efficacy and agility significantly predict strategic alignment in ICS environments (R² ≈ 0.40).</p>
+        <p>This quantitative study examined how cybersecurity control effectiveness and organizational agility influence strategic alignment in industrial control system (ICS) environments. Using multivariate statistical analysis, the research demonstrated that perceived security efficacy and adaptive capability significantly predict executive-level strategic alignment (R² ≈ 0.40), providing empirical evidence that cybersecurity maturity in operational environments is not merely a technical issue, but a governance and business integration challenge.</p>
+        <p>The findings bridge the long-standing divide between operational technology (OT) security and enterprise strategy, offering a data-backed framework for aligning resilience investments with business outcomes in critical infrastructure sectors.</p>
         <a class="btn" href="dissertation.pdf" target="_blank" rel="noopener" aria-label="Download Devecchio Turner's doctoral dissertation PDF">Dissertation (PDF)</a>
       </article>
     </section>
 
     <section id="contact" class="panel contact">
       <h2>Get in Touch</h2>
-      <p><a class="btn primary" href="mailto:drdevturner@gmail.com" aria-label="Email Devecchio Turner">drdevturner@gmail.com</a> · <a class="btn" href="tel:+18177515506" aria-label="Call Devecchio Turner">817.751.5506</a> · <a class="btn" href="https://www.linkedin.com/in/devecchioturner/" target="_blank" rel="noopener" aria-label="View Devecchio Turner's LinkedIn profile">LinkedIn</a></p>
+      <p>
+        <a class="btn primary" href="mailto:drdevturner@gmail.com" aria-label="Email Devecchio Turner">drdevturner@gmail.com</a>
+        ·
+        <a class="btn" href="tel:+18177515506" aria-label="Call Devecchio Turner">817.751.5506</a>
+        ·
+        <a class="btn" href="https://www.linkedin.com/in/devecchioturner/" target="_blank" rel="noopener" aria-label="View Devecchio Turner's LinkedIn profile">LinkedIn</a>
+      </p>
     </section>
   </main>
 
